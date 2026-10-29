@@ -40,10 +40,12 @@ function Login() {
         return;
       }
 
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("loggedIn", "true");
-      localStorage.setItem("userName", data.user.name);
-      localStorage.setItem("userEmail", data.user.email);
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("loggedIn", "true");
+    localStorage.setItem("userName", data.user.name);
+    localStorage.setItem("userEmail", data.user.email);
+    localStorage.setItem("user", JSON.stringify(data.user));
+
 
       alert("Login successful!");
       navigate("/dashboard");
